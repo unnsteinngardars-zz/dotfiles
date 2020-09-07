@@ -16,3 +16,9 @@ augroup filetype_vim
 augroup END
 " }}}
 
+" CoC statusline update {{{
+augroup coc_statusline_update
+  	autocmd!
+	autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+augroup END
+" }}}

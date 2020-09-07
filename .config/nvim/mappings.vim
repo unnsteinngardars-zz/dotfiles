@@ -1,9 +1,13 @@
 :inoremap jk <esc>
 :inoremap <esc> <nop>
 
-" Open Vim config file to edit
+" Open Vim config files to edit
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-
+:nnoremap <leader>evo :vsplit $HOME/.config/nvim/options.vim<cr>
+:nnoremap <leader>eva :vsplit $HOME/.config/nvim/autocommands.vim<cr>
+:nnoremap <leader>evm :vsplit $HOME/.config/nvim/mappings.vim<cr>
+:nnoremap <leader>evp :vsplit $HOME/.config/nvim/plugins.vim<cr>
+:nnoremap <leader>evd :vsplit $HOME/.config/nvim/dependencies.md<cr>
 " Source the vim file after it has been saved
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
@@ -18,6 +22,11 @@
 
 " turn terminal to normal mode on escape
 :tnoremap <Esc> <C-\><C-n>
+
+:nmap <silent> gd <Plug>(coc-definition)
+:nmap <silent> gy <Plug>(coc-type-definition)
+:nmap <silent> gi <Plug>(coc-implementation)
+:nmap <silent> gr <Plug>(coc-references)
 
 " Alt+left/right to go to beginning/end of current word {{{
 :inoremap <M-Left> <esc>bi
@@ -52,7 +61,7 @@ endfunction
 " }}}
 
 " Show documentation by pressing K in normal mode {{{
-function! s:ShowDocumentation()
+function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
@@ -60,7 +69,7 @@ function! s:ShowDocumentation()
   endif
 endfunction
 
-:nnoremap <silent> K :call <SID>ShowDocumentation()<CR>
+:nnoremap <silent> K :call <SID>show_documentation()<CR>
 " }}}
 
 " Open terminal on C-n {{{
@@ -69,7 +78,7 @@ function! OpenTerminal()
 	resize 10
 endfunction
 
-:nnoremap <c-n> :call OpenTerminal()<CR> 
+:nnoremap <c-n> :call OpenTerminal()<CR>
 " }}}
 
 " use alt+hjkl to move between split/vsplit panels {{{

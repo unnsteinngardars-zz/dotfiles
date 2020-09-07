@@ -1,8 +1,12 @@
 # Dependencies
 
-## Auto pairs
+## CoC
 
-To install auto-pairs you need to have `neoclide/coc.vim` installed and then run `:CocInstall coc-pairs`
+`:CocInstall auto-pairs prettier emmet eslint snippets css html json tsserver`
+
+### coc-snippets
+Install neovim module for python to use
+`pip3 install --user neovim`
 
 ## Fzf
 Silver Searcher

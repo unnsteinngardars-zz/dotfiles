@@ -1,10 +1,14 @@
-:syntax on
 :set number
 :highlight lineNr ctermfg=white
 :set numberwidth=3
 :let mapleader = "-"
 :let maplocalleader = "\\"
 :set encoding=utf8
+
+:nnoremap Ó :vertical resize +5<CR>
+:nnoremap Ò :vertical resize -5<CR>
+:nnoremap Ô :resize +5<CR>
+:nnoremap  :resize -5<CR>
 
 " FZF
 :let $FZF_DEFAULT_COMMAND = 'ag -g ""'
@@ -19,33 +23,31 @@
 :set splitright
 :set splitbelow
 
-" Ale
-:let g:ale_fixers = {
-\   '*': ['trim_whitespace'],
-\}
-:let g:ale_fix_on_save = 1
-:let g:ale_disable_lsp = 1
-:let g:ale_sign_error = '❌'
-:let g:ale_sign_warning = '⚠️'
+" Themes and syntax
+if (has("termguicolors"))
+ :set termguicolors
+endif
+:syntax enable
+:colorscheme "dracula"
 
-" Lightline Ale
-let g:lightline = {}
-let g:lightline.component_expand = {
-      \  'linter_checking': 'lightline#ale#checking',
-      \  'linter_infos': 'lightline#ale#infos',
-      \  'linter_warnings': 'lightline#ale#warnings',
-      \  'linter_errors': 'lightline#ale#errors',
-      \  'linter_ok': 'lightline#ale#ok',
+" Coc
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+
+:let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status'
+      \ },
       \ }
-let g:lightline.component_type = {
-      \     'linter_checking': 'right',
-      \     'linter_infos': 'right',
-      \     'linter_warnings': 'warning',
-      \     'linter_errors': 'error',
-      \     'linter_ok': 'right',
-      \ }
-let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ]] }
-
-
-
-
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  :set signcolumn=number
+else
+  :set signcolumn=yes
+endif

@@ -24,8 +24,8 @@ Plug 'vim-scripts/taglist.vim'
 Plug 'tpope/vim-fugitive'
 " Language pack collection
 Plug 'sheerun/vim-polyglot'
-" Ale
-Plug 'dense-analysis/ale'
-Plug 'maximbaz/lightline-ale'
+
+" Theme
+Plug 'dracula/vim', {'as': 'dracula'}
 call plug#end()
 
