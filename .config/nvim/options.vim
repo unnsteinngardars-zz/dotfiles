@@ -5,11 +5,6 @@
 :let maplocalleader = "\\"
 :set encoding=utf8
 
-:nnoremap Ó :vertical resize +5<CR>
-:nnoremap Ò :vertical resize -5<CR>
-:nnoremap Ô :resize +5<CR>
-:nnoremap  :resize -5<CR>
-
 " FZF
 :let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 :let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.5, 'yoffset': 0.1, 'border': 'rounded'}}

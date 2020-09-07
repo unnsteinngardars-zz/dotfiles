@@ -11,6 +11,12 @@
 " Source the vim file after it has been saved
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" Shift+alt+hjkl to resize pane vertically/horizontally 
+:nnoremap Ó :vertical resize +5<CR>
+:nnoremap Ò :vertical resize -5<CR>
+:nnoremap Ô :resize +5<CR>
+:nnoremap  :resize -5<CR>
+
 " Nerd Tree
 :nnoremap <C-o> :NERDTreeToggle<CR>
 
