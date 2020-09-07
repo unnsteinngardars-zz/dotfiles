@@ -1,22 +1,6 @@
 :inoremap jk <esc>
 :inoremap <esc> <nop>
 
-" Open Vim config files to edit
-:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-:nnoremap <leader>evo :vsplit $HOME/.config/nvim/options.vim<cr>
-:nnoremap <leader>eva :vsplit $HOME/.config/nvim/autocommands.vim<cr>
-:nnoremap <leader>evm :vsplit $HOME/.config/nvim/mappings.vim<cr>
-:nnoremap <leader>evp :vsplit $HOME/.config/nvim/plugins.vim<cr>
-:nnoremap <leader>evd :vsplit $HOME/.config/nvim/dependencies.md<cr>
-" Source the vim file after it has been saved
-:nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" Shift+alt+hjkl to resize pane vertically/horizontally 
-:nnoremap Ó :vertical resize +5<CR>
-:nnoremap Ò :vertical resize -5<CR>
-:nnoremap Ô :resize +5<CR>
-:nnoremap  :resize -5<CR>
-
 " Nerd Tree
 :nnoremap <C-o> :NERDTreeToggle<CR>
 
@@ -35,6 +19,17 @@
 :nmap <silent> gy <Plug>(coc-type-definition)
 :nmap <silent> gi <Plug>(coc-implementation)
 :nmap <silent> gr <Plug>(coc-references)
+
+" Open Vim config files to edit {{{
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+:nnoremap <leader>evo :vsplit $HOME/.config/nvim/options.vim<cr>
+:nnoremap <leader>eva :vsplit $HOME/.config/nvim/autocommands.vim<cr>
+:nnoremap <leader>evm :vsplit $HOME/.config/nvim/mappings.vim<cr>
+:nnoremap <leader>evp :vsplit $HOME/.config/nvim/plugins.vim<cr>
+:nnoremap <leader>evd :vsplit $HOME/.config/nvim/dependencies.md<cr>
+" Source the vim file after it has been saved
+:nnoremap <leader>sv :source $MYVIMRC<cr>
+" }}}
 
 " Alt+left/right to go to beginning/end of current word {{{
 :inoremap <M-Left> <esc>bi
@@ -98,4 +93,11 @@ endfunction
 :nnoremap <C-j> <C-w>j
 :nnoremap <C-k> <C-w>k
 :nnoremap <C-l> <C-w>l
+" }}}
+
+" Shift+alt+hjkl to resize pane vertically/horizontally  {{{
+:nnoremap Ó :vertical resize +5<CR>
+:nnoremap Ò :vertical resize -5<CR>
+:nnoremap Ô :resize +5<CR>
+:nnoremap  :resize -5<CR>
 " }}}
