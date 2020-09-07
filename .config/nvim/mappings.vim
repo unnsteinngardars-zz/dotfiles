@@ -11,6 +11,7 @@
 " Source the vim file after it has been saved
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" Nerd Tree
 :nnoremap <C-o> :NERDTreeToggle<CR>
 
 " search for files
@@ -23,6 +24,7 @@
 " turn terminal to normal mode on escape
 :tnoremap <Esc> <C-\><C-n>
 
+" CoC
 :nmap <silent> gd <Plug>(coc-definition)
 :nmap <silent> gy <Plug>(coc-type-definition)
 :nmap <silent> gi <Plug>(coc-implementation)
@@ -81,7 +83,7 @@ endfunction
 :nnoremap <c-n> :call OpenTerminal()<CR>
 " }}}
 
-" use alt+hjkl to move between split/vsplit panels {{{
+" use ctrl+hjkl to move between split/vsplit panels {{{
 :tnoremap <C-h> <C-\><C-n><C-w>h
 :tnoremap <C-j> <C-\><C-n><C-w>j
 :tnoremap <C-k> <C-\><C-n><C-w>k
