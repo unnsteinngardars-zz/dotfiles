@@ -2,7 +2,7 @@
 
 ## CoC
 
-`:CocInstall auto-pairs prettier emmet eslint snippets css html json tsserver`
+`:CocInstall auto-pairs prettier emmet eslint snippets css html json tsserver coc-fzf-preview`
 
 ## neovim module
 For python run 
