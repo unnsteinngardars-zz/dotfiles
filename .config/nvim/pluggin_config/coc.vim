@@ -5,6 +5,7 @@ let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', '
 " fzf_preview is used as a CoC extension
 let g:fzf_preview_command = 'bat --color=always --plain {-1}'
 let g:fzf_preview_use_dev_icons = 1
+hi CocFloating guibg=none guifg=none
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
