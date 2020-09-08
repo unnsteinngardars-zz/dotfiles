@@ -24,8 +24,9 @@ Plug 'vim-scripts/taglist.vim'
 Plug 'tpope/vim-fugitive'
 " Language pack collection
 Plug 'sheerun/vim-polyglot'
-
 " Theme
 Plug 'dracula/vim', {'as': 'dracula'}
+" vim snippets
+Plug 'honza/vim-snippets'
 call plug#end()
 

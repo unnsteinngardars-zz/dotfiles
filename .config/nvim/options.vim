@@ -6,7 +6,7 @@
 :set encoding=utf8
 
 " FZF
-:let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+":let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 :let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.5, 'yoffset': 0.1, 'border': 'rounded'}}
 
 :let g:NERDTreeShowHidden = 1
@@ -26,8 +26,7 @@ endif
 :colorscheme "dracula"
 
 " Coc
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
-
+:let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 :let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
@@ -38,6 +37,9 @@ let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', '
       \   'cocstatus': 'coc#status'
       \ },
       \ }
+:let g:fzf_preview_command = 'bat --color=always --plain {-1}'
+:let g:fzf_preview_use_dev_icons = 1
+
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
