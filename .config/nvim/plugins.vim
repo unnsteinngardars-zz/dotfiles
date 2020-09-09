@@ -28,5 +28,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim', {'as': 'dracula'}
 " vim snippets
 Plug 'honza/vim-snippets'
+" pop up terminal
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 

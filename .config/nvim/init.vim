@@ -9,5 +9,5 @@ source ~/.config/nvim/pluggin_config/coc.vim
 source ~/.config/nvim/pluggin_config/fzf.vim
 source ~/.config/nvim/pluggin_config/lightline.vim
 source ~/.config/nvim/pluggin_config/nerd_tree.vim
-
+source ~/.config/nvim/pluggin_config/float_term.vim
 source ~/.config/nvim/themes/dracula.vim

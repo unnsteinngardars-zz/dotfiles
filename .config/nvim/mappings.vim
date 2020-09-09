@@ -19,6 +19,7 @@ nnoremap <leader>epc :vsplit $HOME/.config/nvim/pluggin_config/coc.vim<cr>
 nnoremap <leader>epf :vsplit $HOME/.config/nvim/pluggin_config/fzf.vim<cr>
 nnoremap <leader>epl :vsplit $HOME/.config/nvim/pluggin_config/lightline.vim<cr>
 nnoremap <leader>epn :vsplit $HOME/.config/nvim/pluggin_config/nerd_tree.vim<cr>
+nnoremap <leader>ept :vsplit $HOME/.config/nvim/pluggin_config/float_term.vim<cr>
 " Source the vim file after it has been saved
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " }}}
@@ -48,15 +49,6 @@ function! MoveLineDown()
 	execute "normal! \"yyyddp"
 	execute "call nvim_win_set_cursor(0, l:new_pos)"
 endfunction
-" }}}
-
-" Open terminal on C-n {{{
-function! OpenTerminal()
-	split term://zsh
-	resize 10
-endfunction
-
-nnoremap <c-n> :call OpenTerminal()<CR>
 " }}}
 
 " use ctrl+hjkl to move between split/vsplit panels {{{
