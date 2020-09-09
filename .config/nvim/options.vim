@@ -11,7 +11,3 @@ set hidden
 " prompt suggestions when in command mode
 set wildmenu
 set wildmode=longest:full,full
-
-" when creating a new pane, make it split to the right and down
-set splitright
-set splitbelow
