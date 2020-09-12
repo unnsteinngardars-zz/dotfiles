@@ -5,7 +5,7 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
 
-nnoremap <C-b> :NERDTreeToggle<CR>
+nnoremap <leader>b :NERDTreeToggle<CR>
 
 " Nerd Tree {{{
 augroup nerd_tree

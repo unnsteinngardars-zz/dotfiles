@@ -30,5 +30,7 @@ Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'honza/vim-snippets'
 " pop up terminal
 Plug 'voldikss/vim-floaterm'
+" markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 

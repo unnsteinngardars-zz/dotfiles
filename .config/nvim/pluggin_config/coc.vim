@@ -13,8 +13,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " CoC fzf-preview extension {{{
-nmap <leader>f [fzf-p]
-xmap <leader>f [fzf-p]
+nmap <leader>p [fzf-p]
+xmap <leader>p [fzf-p]
 
 nnoremap <silent> [fzf-p]p     :<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>
 nnoremap <silent> [fzf-p]gs    :<C-u>CocCommand fzf-preview.GitStatus<CR>

@@ -1,5 +1,4 @@
 set number
-highlight lineNr ctermfg=white
 set numberwidth=3
 let mapleader = "-"
 let maplocalleader = "\\"
