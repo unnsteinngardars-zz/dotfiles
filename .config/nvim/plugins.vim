@@ -26,6 +26,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 " Theme
 Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'morhetz/gruvbox'
 " vim snippets
 Plug 'honza/vim-snippets'
 " pop up terminal
@@ -33,4 +34,5 @@ Plug 'voldikss/vim-floaterm'
 " markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
+
 

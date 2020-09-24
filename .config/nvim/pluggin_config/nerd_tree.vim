@@ -6,7 +6,7 @@ let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
 
 nnoremap <leader>b :NERDTreeToggle<CR>
-
+nnoremap <leader>l :NERDTreeFind<CR>
 " Nerd Tree {{{
 augroup nerd_tree
 	autocmd!
